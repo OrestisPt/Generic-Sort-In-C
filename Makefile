@@ -6,4 +6,4 @@ run-sort:
 	./test_sort
 
 clean:
-	rm -rf reverseLinkedList addIntsNoOverflow max_minus_min count_pwful_inverses test_sort *.o 
+	rm -rf test_sort *.o 
