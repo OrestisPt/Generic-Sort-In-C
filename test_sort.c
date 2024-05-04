@@ -8,6 +8,9 @@
 // Prints the ith element of the table
 typedef void (*Print) (void*, int i);
 
+
+// Object-related code
+
 // Some abritrary object
 typedef struct{
     int age;
@@ -37,6 +40,8 @@ void printArray(void* A, int n, Print print){
     printf("\n");
 }
 
+
+// Print Functions
 void printInts(int* a, int i){
     printf("%d ", a[i]);
 }
@@ -53,6 +58,8 @@ void printPerson(Person* a, int i){
     printf("%s %s, %d years old\n", a[i]->name, a[i]->surname, a[i]->age);
 }
 
+
+// Copy Functions
 void* copyArrInts(int* A, int n){
     int* B = (int *)malloc(n * sizeof(int));
     for(int i = 0; i < n; i++){
@@ -77,6 +84,8 @@ void* copyArrPersons(Person* A, int n){
     return B;
 }
 
+
+// Set Functions
 void setIthElementInts(int* table, int i, int* value){
     table[i] = *value;
 }
@@ -89,6 +98,8 @@ void setIthElementPersons(Person* table, int i, Person* value){
     table[i] = *value;
 }
 
+
+//Get Functions
 void* getIthElementInts(int* table, int i){
     return table + i;
 }
@@ -105,6 +116,7 @@ void* getIthElementPersons(Person* table, int i){
     return table + i;
 }
 
+// Swap Functions
 void swap_ints(int* a, int* b){
     int temp = *a;
     *a = *b;
@@ -129,6 +141,8 @@ void swap_persons(Person* a, Person* b){
     *b = temp;
 }
 
+
+// Compare Functions
 int compare_ints(int* a, int* b){
     return (*a < *b);
 }
@@ -159,6 +173,8 @@ int compare_persons(Person* a, Person* b){
     return 0;
 }
 
+
+// Test for the sort functions
 int main(){
     srand(time(NULL));
     int size = 10;
