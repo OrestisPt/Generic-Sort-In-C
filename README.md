@@ -10,7 +10,7 @@ There are 2 files (plus an extra test for demonstration purposes):
 
 There is also a simple **Makefile** included that compiles and runs **test_sort.c** and shows how to link the **sort.c** file.
 
-## 2. Quick explanation and information
+## Quick explanation and information
 
 Each sort function follows the standard procedure. **quickSort()** is implemented with the pivot being selected as the last item of each array/subarray.
 
